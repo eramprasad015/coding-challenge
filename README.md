@@ -4,21 +4,20 @@ ClickBank coding-challenge
 
 Thank you for taking the ClickBank Coding Challenge. We want to give you an opportunity to demonstrate your abilities while giving us a good sense of how you approach and address challenges. 
 
-#### Create a NodeJS app which will serve as the backend of your application. 
-* Feel free to use something like ExpressJS, NextJS, etc... to generate your application boilerplate. We use Material Design for UI components. Feel free to use that, or any other UI UI framework if you'd like. 
+#### Create a REST API that will be used as the CRUD layer in your application. 
+* Feel free to use something like Spring Boot, micronaut, Express, etc... to generate your application boilerplate. We use Material Design for UI components. Feel free to use that, or any other UI UI framework if you'd like. 
 * Support the following routes
-  * / Main listing of users (details below)
-  * /user/{userId} User details page
+  * /user Generates a pageable list of users
+  * /user/{userId} Gets user details on GET and update on PUT
+  * /user Creates user
+* Fetch some data from https://randomuser.me/api/?results=20 . This will give you an list of users to seed your database.
 
-#### Use the API to fetch some data and display it on a page.
-* Fetch some data from https://randomuser.me/api/?results=20 . This will give you an list of users.
-* Display the users in a table. Include at least first, last, email, and profile image.  Provide a link to the full user profile in one of the columns. This link should take you to /users/{userId}
-* With javascript, sort the users by name asc/desc.
-* Add a behavior so that if you hover over the username, the user details appear in a modal. 
+#### Create
+* Display the main users list on the initial page. Include at least first, last, email, and profile image.  Provide a link to the full user profile in one of the columns. This link should take you a page or modal that displays the information available in /users/{userId}.
+* The page or modal that results from clicking on a row should display all available information about a user as well as allow you to edit that information.
 
 #### For an additional WOW factor, consider implementing the following:
-* Use ReactJS for your solution. We have standardized on ReactJS in all of our applications.
-* Use Material design for your project
+* Use ReactJS for the client and Spring Boot as a backend for your solution. We have standardized on ReactJS and Sprin Boot in all of our applications.
 * Make the styles responsive to window changes. 
 * Add any embellishments that allow you to show off your skills!
 
