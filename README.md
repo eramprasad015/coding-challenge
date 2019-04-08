@@ -17,7 +17,8 @@ Thank you for taking the ClickBank Coding Challenge. We want to give you an oppo
 * The page or modal that results from clicking on a row should display all available information about a user as well as allow you to edit that information.
 
 #### For an additional WOW factor, consider implementing the following:
-* Use ReactJS for the client and Spring Boot as a backend for your solution. We have standardized on ReactJS and Sprin Boot in all of our applications.
+* Use ReactJS for the client and 
+g Boot as a backend for your solution. We have standardized on ReactJS and Spring Boot in all of our applications.
 * Make the styles responsive to window changes. 
 * Add any embellishments that allow you to show off your skills!
 
