@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		@import url("/style.css");
+	</style>
+
+	<script data-require="jquery@3.0.0" data-semver="3.0.0"
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+	<link data-require="bootstrap@3.3.7" data-semver="3.3.7" rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<script data-require="angular.js@1.6.6" data-semver="1.6.6"
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+	<script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js" type="text/javascript"></script>
+	<script>
+		(function () {
+
+			angular.module("testApp", ['ui.bootstrap']).controller('testCtrl', ['$scope', '$http', function ($scope, $http) {
+				$scope.userData = undefined;
+				$scope.selectedUser = undefined;
+				$http.get('https://randomuser.me/api/?results=30&nat=US').then(function (response) {
+					$scope.userData = response.data;
+				});
+				$scope.selectUser = function (usr) {
+					$scope.selectedUser = usr;
+				};
+			}]);
+
+
+		}());
+	</script>
+
+</head>
+
+<body ng-app="testApp">
+	<div ng-controller="testCtrl">
+		<form name="commonForm">
+
+
+			<div ng-hide="selectedUser">
+				<table>
+					<tbody>
+						<tr>
+							<td align="center">
+								<div class="col-sm-4 userInfo" ng-repeat="user in userData.results"
+									ng-click="selectUser(user)">
+									<img class="col-sm-4 profile" ng-src="{{user.picture.medium}}" />
+									<div class="col-sm-8">
+										<div class="userlist"><b>{{user.name.first}} {{user.name.last}}</b></div>
+										<div class="userlist">{{user.email}}</div>
+
+									</div>
+								</div>
+							</td>
+						</tr>
+
+					</tbody>
+
+
+				</table>
+			</div>
+
+
+
+
+			<div ng-show="selectedUser">
+
+				<br />
+				<br />
+				<img ng-src="{{selectedUser.picture.large}}" />
+				<table>
+					<tr>
+						<td>
+							<label for="first">First Name: </label>
+						</td>
+						<td>
+							<input type="text" class="form-control" id="first" ng-model="selectedUser.name.first">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="last">Last Name:</label>
+						</td>
+						<td>
+							<input type="text" class="form-control" id="last" ng-model="selectedUser.name.last">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="first">Login: </label>
+						</td>
+						<td>
+							<input type="text" class="form-control" id="first" ng-model="selectedUser.login.username">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="email">Email:</label>
+						</td>
+						<td>
+							<input type="text" class="form-control" id="email" ng-model="selectedUser.email">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="dob">Date of Birth:</label>
+						</td>
+						<td>
+							<input type="text" class="form-control" id="dob"
+								ng-model="selectedUser.dob.date|date:'mediumDate'">
+						</td>
+					</tr>
+					<tr>
+						<td><label for="nat">UUID:</label></td>
+
+						<td><input type="text" class="form-control" id="nat" ng-model="selectedUser.login.uuid">
+						</td>
+
+					<tr>
+						<td><label for="nat">Nationality:</label></td>
+						<td><input type="text" class="form-control" id="nat" ng-model="selectedUser.nat">
+						</td>
+					</tr>
+				</table>
+				<button align="center" ng-click="selectedUser = undefined">Go Back</button>
+
+
+
+		</form>
+
+	</div>
+</body>
+
+</html>
