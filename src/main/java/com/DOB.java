@@ -15,6 +15,6 @@ public class DOB {
 	
 	private String date;
 	
-	private String age;
+	private Integer age;
 
 }

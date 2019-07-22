@@ -2,4 +2,11 @@
 "name":{"title":"miss","first":"celina","last":"shelton"}
 "location":{"street":"5935 marsh ln","city":"alexandria","state":"louisiana","postcode":99261,"coordinates":{"latitude":"81.2135","longitude":"66.4870"},"timezone":{"offset":"+3:30","description":"Tehran"}}
 ,"email":"celina.shelton@example.com"
-,"login":{"uuid":"2d199705-fca1-45af-8dd1-e3407ea98c4c","username":"bigwolf298","password":"starcraft","salt":"UNeuO9HY","md5":"4cb1ee2c6c7d288e5dfea2556fdaf656","sha1":"6bd688b950f5212b70e2b014fae8af6710097c1a","sha256":"5f7fdc8a56fab37b428297f72355faa2be2a20b31753574b3c2dd98957b4dd53"},"dob":{"date":"1960-09-11T08:35:16Z","age":58},"registered":{"date":"2002-10-11T18:55:20Z","age":16},"phone":"(865)-572-7576","cell":"(969)-750-4568","id":{"name":"SSN","value":"555-81-3025"},"picture":{"large":"https://randomuser.me/api/portraits/women/45.jpg","medium":"https://randomuser.me/api/portraits/med/women/45.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/45.jpg"},"nat":"US"}
+,"login":{"uuid":"2d199705-fca1-45af-8dd1-e3407ea98c4c","username":"bigwolf298","password":"starcraft","salt":"UNeuO9HY","md5":"4cb1ee2c6c7d288e5dfea2556fdaf656","sha1":"6bd688b950f5212b70e2b014fae8af6710097c1a","sha256":"5f7fdc8a56fab37b428297f72355faa2be2a20b31753574b3c2dd98957b4dd53"}
+,"dob":{"date":"1960-09-11T08:35:16Z","age":58},
+"registered":{"date":"2002-10-11T18:55:20Z","age":16}
+,"phone":"(865)-572-7576",
+"cell":"(969)-750-4568",
+"id":{"name":"SSN","value":"555-81-3025"},
+"picture":{"large":"https://randomuser.me/api/portraits/women/45.jpg","medium":"https://randomuser.me/api/portraits/med/women/45.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/45.jpg"},
+"nat":"US"}

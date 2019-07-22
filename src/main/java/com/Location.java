@@ -19,7 +19,7 @@ public class Location {
 	private String city;
 	private String street;
 	private String state;
-	private String postcode;
+	private Integer postcode;
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(referencedColumnName = "id")

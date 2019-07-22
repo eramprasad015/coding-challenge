@@ -15,5 +15,5 @@ public class Registered {
 	
 	private String date;
 	
-	private String age;
+	private Integer age;
 }

@@ -1,4 +1,5 @@
 package com;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -30,6 +31,13 @@ class Controller {
 	  User newUser(@RequestBody User newUser) {
 	    return repository.save(newUser);
 	  }
+	  
+	  @PostMapping("/users")
+	  List<User> newUser(@RequestBody UserWrapper userWrapper) {
+		List<User> newUserList = new ArrayList<User>();
+		for(User u : userWrapper.getUsers()) newUserList.add(repository.save(u));
+		return newUserList;
+	  }
 
 	  // Single item
 
@@ -40,19 +48,19 @@ class Controller {
 	      .orElseThrow(() -> new UserNotFoundException(id));
 	  }
 
-	  @PutMapping("/user/{id}")
-	  User replaceUser(@RequestBody User newUser, @PathVariable Long id) {
-
-	    return repository.findById(id)
-	      .map(User -> {
-	        User.setName(newUser.getName());
-	        return repository.save(User);
-	      })
-	      .orElseGet(() -> {
-	        newUser.setPrimarykey(id);
-	        return repository.save(newUser);
-	      });
-	  }
+//	  @PutMapping("/user/{id}")
+//	  User replaceUser(@RequestBody User newUser, @PathVariable Long id) {
+//
+//	    return repository.findById(id)
+//	      .map(User -> {
+//	        User.setName(newUser.getName());
+//	        return repository.save(User);
+//	      })
+//	      .orElseGet(() -> {
+//	        newUser.setPrimarykey(id);
+//	        return repository.save(newUser);
+//	      });
+//	  }
 
 //	  @DeleteMapping("/user/{id}")
 //	  void deleteUser(@PathVariable Long id) {
