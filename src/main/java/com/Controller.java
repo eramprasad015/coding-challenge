@@ -48,19 +48,17 @@ class Controller {
 	      .orElseThrow(() -> new UserNotFoundException(id));
 	  }
 
-//	  @PutMapping("/user/{id}")
-//	  User replaceUser(@RequestBody User newUser, @PathVariable Long id) {
-//
-//	    return repository.findById(id)
-//	      .map(User -> {
-//	        User.setName(newUser.getName());
-//	        return repository.save(User);
-//	      })
-//	      .orElseGet(() -> {
-//	        newUser.setPrimarykey(id);
-//	        return repository.save(newUser);
-//	      });
-//	  }
+	  @PutMapping("/user/{id}")
+	  User replaceUser(@RequestBody User newUser, @PathVariable Long id) {
+
+	    return repository.findById(id)
+	      .map(User -> {
+	        return repository.save(User);
+	      })
+	      .orElseGet(() -> {
+	        return repository.save(newUser);
+	      });
+	  }
 
 //	  @DeleteMapping("/user/{id}")
 //	  void deleteUser(@PathVariable Long id) {

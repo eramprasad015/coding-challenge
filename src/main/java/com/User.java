@@ -13,7 +13,7 @@ import lombok.Data;
 @Entity
 @Data
 public class User {
-	@Column(name="primarykey", unique=true, nullable=false, updatable=false)
+	@Column(name="primarykey")
 	private @Id @GeneratedValue Long primarykey;
 	
 	@OneToOne(cascade = CascadeType.ALL)
