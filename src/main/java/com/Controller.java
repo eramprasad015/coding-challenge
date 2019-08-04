@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
+import org.springframework.http.HttpStatus;
 
 @RestController
 class Controller {
@@ -45,7 +47,7 @@ class Controller {
 	  User one(@PathVariable Long id) {
 
 	    return repository.findById(id)
-	      .orElseThrow(() -> new UserNotFoundException(id));
+	      .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cannot find that user."));
 	  }
 
 	  @PutMapping("/user/{id}")

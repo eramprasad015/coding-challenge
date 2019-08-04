@@ -22,36 +22,36 @@ public class User {
 	
 	private String gender;
 	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(referencedColumnName = "id")
-	private Location location;
-	
-	private String email;
-	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(referencedColumnName = "id")
-	private Login login;
-	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(referencedColumnName = "id")
-	private DOB dob;
-	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(referencedColumnName = "id")
-	private Registered registered;
-	
-	private String phone;
-	
-	private String cell;
-	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="user_identity",referencedColumnName = "id")
-	private UserIdentity id;
-	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(referencedColumnName = "id")
-	private Picture picture;
-	
-	private String nat;
+//	@OneToOne(cascade = CascadeType.ALL)
+//	@JoinColumn(referencedColumnName = "id")
+//	private Location location;
+//	
+//	private String email;
+//	
+//	@OneToOne(cascade = CascadeType.ALL)
+//	@JoinColumn(referencedColumnName = "id")
+//	private Login login;
+//	
+//	@OneToOne(cascade = CascadeType.ALL)
+//	@JoinColumn(referencedColumnName = "id")
+//	private DOB dob;
+//	
+//	@OneToOne(cascade = CascadeType.ALL)
+//	@JoinColumn(referencedColumnName = "id")
+//	private Registered registered;
+//	
+//	private String phone;
+//	
+//	private String cell;
+//	
+//	@OneToOne(cascade = CascadeType.ALL)
+//	@JoinColumn(name="user_identity",referencedColumnName = "id")
+//	private UserIdentity id;
+//	
+//	@OneToOne(cascade = CascadeType.ALL)
+//	@JoinColumn(referencedColumnName = "id")
+//	private Picture picture;
+//	
+//	private String nat;
 
 }
