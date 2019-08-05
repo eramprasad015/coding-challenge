@@ -2,7 +2,8 @@ package com;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.web.bind.annotation.DeleteMapping;
+import com.repository.NameRepository;
+import com.repository.UserRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,11 +19,11 @@ class Controller {
 
 	  private final UserRepository repository;
 
+//	  private final NameRepository nameRepository;
+
 	  Controller(UserRepository repository) {
 	    this.repository = repository;
 	  }
-
-	  // Aggregate root
 
 	  @GetMapping("/user")
 	  List<User> all() {

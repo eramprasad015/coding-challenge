@@ -1,4 +1,4 @@
-package com;
+package com.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,14 +9,12 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Picture {
+public class DOB {
 	@Column(unique=true, nullable=false, updatable=false)
 	private @Id @GeneratedValue Long id;
 	
-	private String large;
+	private String date;
 	
-	private String medium;
-	
-	private String thumbnail;
+	private Integer age;
 
 }

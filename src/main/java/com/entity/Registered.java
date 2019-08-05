@@ -1,4 +1,4 @@
-package com;
+package com.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,12 +7,13 @@ import javax.persistence.Id;
 
 import lombok.Data;
 
-@Data
 @Entity
-public class Coordinates {
+@Data
+public class Registered {
 	@Column(unique=true, nullable=false, updatable=false)
 	private @Id @GeneratedValue Long id;
 	
-	private String latitude;
-	private String longitude;
+	private String date;
+	
+	private Integer age;
 }

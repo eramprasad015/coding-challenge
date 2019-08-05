@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 
 @Entity
@@ -16,8 +17,9 @@ public class User {
 	@Column(name="primarykey")
 	private @Id @GeneratedValue Long primarykey;
 	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(referencedColumnName = "id")
+	@OneToOne(cascade = {CascadeType.ALL})
+	@JoinColumn(name="name_id")
+	@JsonManagedReference
 	private Name name;
 	
 	private String gender;

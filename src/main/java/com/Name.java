@@ -1,20 +1,21 @@
 package com;
 
-import javax.persistence.GeneratedValue;
-import lombok.Data;
+import javax.persistence.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import lombok.Data;
 
 @Data
 @Entity
 public class Name {
-	@Column(unique=true, nullable=false, updatable=false)
-	private @Id @GeneratedValue Long id;
+	@Column(name = "name_id")
+	private @Id @GeneratedValue Long primarykey;
 	private String title;
 	private String first;
 	private String last;
+
+	@JsonBackReference
+	@OneToOne(mappedBy = "name")
+	private User user;
 
 }

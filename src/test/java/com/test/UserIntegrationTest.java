@@ -2,7 +2,7 @@ package com.test;
 
 import com.Name;
 import com.User;
-import com.UserRepository;
+import com.repository.UserRepository;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
