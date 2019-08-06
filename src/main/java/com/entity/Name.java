@@ -1,8 +1,9 @@
-package com;
+package com.entity;
 
 import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 @Data
@@ -14,8 +15,9 @@ public class Name {
 	private String first;
 	private String last;
 
-	@JsonBackReference
-	@OneToOne(mappedBy = "name")
+	//@JsonBackReference
+	@JsonIgnore
+	@OneToOne(mappedBy = "name", fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
 	private User user;
 
 }

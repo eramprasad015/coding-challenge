@@ -1,10 +1,9 @@
-package com;
+package com.entity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Entity;
-
+import com.entity.User;
 import lombok.Data;
 
 @Data

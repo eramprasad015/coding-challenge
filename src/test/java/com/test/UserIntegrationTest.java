@@ -1,7 +1,7 @@
 package com.test;
 
-import com.Name;
-import com.User;
+import com.entity.Name;
+import com.entity.User;
 import com.repository.UserRepository;
 import org.junit.Assert;
 import org.junit.Test;
@@ -43,5 +43,25 @@ public class UserIntegrationTest {
         User savedUser = userRepository.save(user);
         System.out.println("Saved User Primary Key = " + savedUser.getPrimarykey());
         Assert.assertEquals(savedUser, user);
+    }
+
+    @Test
+    public void putTest() {
+        Name name = new Name();
+        name.setFirst("Annelise");
+        name.setLast("Arnette");
+        name.setTitle("Mrs.");
+        User user = new User();
+        user.setName(name);
+        user.setGender("male");
+        user = userRepository.save(user);
+
+        System.out.println("Saved User Primary Key = " + user.getPrimarykey());
+
+        user = userRepository.getOne(user.getPrimarykey());
+        user.setGender("Female");
+        userRepository.save(user);
+        User updatedUser = userRepository.getOne(user.getPrimarykey());
+        Assert.assertTrue(updatedUser.getGender().equals("Female"));
     }
 }
