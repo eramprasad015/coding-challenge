@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9af9bee5-b10b-4dc4-9246-2dc04060d417" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/LoadData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LoadData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/entity/Name.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/UserWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/entity/UserWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/repository/NameRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/repository/NameRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/UserIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/UserIntegrationTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,7 +26,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
+            <state relative-caret-position="765">
               <caret line="70" column="13" lean-forward="true" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
             </state>
           </provider>
@@ -370,8 +362,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="777" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979592" visible="true" weight="0.26332796" />
       <window_info id="Structure" order="1" sideWeight="0.5020408" side_tool="true" weight="0.24959612" />
@@ -382,14 +373,14 @@
       <window_info id="Favorites" order="6" sideWeight="0.5020408" side_tool="true" weight="0.24959612" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32846716" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32846716" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32846716" />
       <window_info anchor="bottom" id="Problems" order="8" weight="0.32846716" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.36301368" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3620438" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32846716" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -674,7 +665,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
+        <state relative-caret-position="765">
           <caret line="70" column="13" lean-forward="true" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
         </state>
       </provider>
