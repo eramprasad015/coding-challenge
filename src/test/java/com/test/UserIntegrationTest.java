@@ -45,8 +45,29 @@ public class UserIntegrationTest {
         Assert.assertEquals(savedUser, user);
     }
 
+//    @Test
+//    public void putTest() {
+//        Name name = new Name();
+//        name.setFirst("Annelise");
+//        name.setLast("Arnette");
+//        name.setTitle("Mrs.");
+//        User user = new User();
+//        user.setName(name);
+//        user.setGender("male");
+//        user = userRepository.save(user);
+//
+//        System.out.println("Saved User Primary Key = " + user.getPrimarykey());
+//
+//        user = userRepository.getOne(user.getPrimarykey());
+//        user.setGender("Female");
+//        userRepository.save(user);
+//        User updatedUser = userRepository.getOne(user.getPrimarykey());
+//        Assert.assertTrue(updatedUser.getGender().equals("Female"));
+//    }
+
     @Test
-    public void putTest() {
+    public void updateTest() {
+        //create new user
         Name name = new Name();
         name.setFirst("Annelise");
         name.setLast("Arnette");
@@ -54,14 +75,19 @@ public class UserIntegrationTest {
         User user = new User();
         user.setName(name);
         user.setGender("male");
-        user = userRepository.save(user);
 
-        System.out.println("Saved User Primary Key = " + user.getPrimarykey());
+        //save new user
+        User before = userRepository.save(user);
+        long beforeId = before.getPrimarykey();
 
-        user = userRepository.getOne(user.getPrimarykey());
-        user.setGender("Female");
-        userRepository.save(user);
-        User updatedUser = userRepository.getOne(user.getPrimarykey());
-        Assert.assertTrue(updatedUser.getGender().equals("Female"));
+        System.out.println("Before Id = " + before.getPrimarykey());
+
+        //set gender on saved user
+        before.setGender("Female");
+
+        //update user
+        userRepository.save(before);
+
+        Assert.assertEquals(before,userRepository.getOne(beforeId));
     }
 }
